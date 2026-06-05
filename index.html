@@ -27,7 +27,7 @@
 
         // --- IMPORTANT: ADD YOUR API KEY HERE ---
         // Get a free key from: https://aistudio.google.com/app/apikey
-        const apiKey = "AQ.Ab8RN6IWV-7jQlGTQTE6bJhX3s3YGS7aHyd6jH1jywhPM8j10w"; 
+        const apiKey = "GEMINI_KEY"; 
 
         // Exponential backoff retry logic
         const fetchWithRetry = async (url, options, maxRetries = 5) => {
@@ -60,7 +60,7 @@
             const [loadingMessageIndex, setLoadingMessageIndex] = useState(0);
 
             const analyzeSymptoms = async () => {
-                if (!apiKey || apiKey === "AQ.Ab8RN6IWV-7jQlGTQTE6bJhX3s3YGS7aHyd6jH1jywhPM8j10w") {
+                if (!apiKey || apiKey === "GEMINI_KEY") {
                     setError("API Key is missing. Please add your Gemini API Key to the code.");
                     return;
                 }
